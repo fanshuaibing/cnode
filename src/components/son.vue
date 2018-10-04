@@ -6,10 +6,10 @@
     <button @click="toFather">向父组件传递数据</button>
     <br>
     <div>我是子组件拿到的全局 state --{{getNum}}</div>
-    <button @click="addone">点击增加</button>
+    <button @click="addone">点击加10</button>
     <hr>
-    <button @click="deone">点击减一</button>
-    <button @click="deoneaction">点击减一action</button>
+    <button @click="deone">点击减10</button>
+    <button @click="deoneaction">点击减10action</button>
 
 
   </div>

@@ -2,38 +2,12 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import  Vuex from  'vuex'
+import store from './state/index'
 import router from './router'
 
-Vue.use(Vuex)
+
 Vue.config.productionTip = false
 
-var store = new Vuex.Store({
-  state:{
-    num:10
-  },
-  mutations:{
-    add(state){
-      return state.num +=10
-    },
-    de(state){
-      return state.num -=20
-    }
-  },
-  actions:{
-    addOne(context){
-      context.commit('add');
-    },
-    deOne(context){
-      context.commit('de')
-    }
-  },
-  getters:{
-    getNum(state){
-      return state.num> 0?state.num:0;
-    }
-  }
-})
 
 
 
