@@ -11,6 +11,27 @@ Vue.config.productionTip = false
 var store = new Vuex.Store({
   state:{
     num:10
+  },
+  mutations:{
+    add(state){
+      return state.num +=10
+    },
+    de(state){
+      return state.num -=20
+    }
+  },
+  actions:{
+    addOne(context){
+      context.commit('add');
+    },
+    deOne(context){
+      context.commit('de')
+    }
+  },
+  getters:{
+    getNum(state){
+      return state.num> 0?state.num:0;
+    }
   }
 })
 

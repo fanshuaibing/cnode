@@ -42,9 +42,8 @@
     methods:{
       getData:function () {
         var self = this;
-        this.$http.post('https://cnodejs.org/api/v1/topics',
-            qs.stringify({page:1, limit:10})
-
+        this.$http.get('https://cnodejs.org/api/v1/topics',
+            {params:{page:1, limit:10}}
         )
             .then(function (res) {
               self.items = res.data.data
