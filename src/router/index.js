@@ -1,32 +1,35 @@
-import   Vue from 'vue';
-import  Router from 'vue-router';
-
-import  HelloWorld from '../components/HelloWorld'
-import  HelloEarth from '../components/HelloEarth'
-import  list from '../components/list'
-import son from  '../components/son'
-import parent from  '../components/parent'
-
-
+import Vue from 'vue'
+import Router from 'vue-router'
+import Article from '../components/Article'
+import PostList from '../components/PostList'
+import UserInfo from '../components/UserInfo'
+import SlideBar from '../components/SlideBar'
 
 Vue.use(Router)
 
 export default new Router({
-  routes:[
+  routes: [
     {
-      name:'helloworld',
-      path:'/helloworld/:worldmsg',
-      component:HelloWorld
+      name:'root',
+      path:'/',
+      components:{
+        main:PostList
+      }
     },
     {
-      name:'helloearth',
-      path:'/helloearth/:earthmsg',
-      component:HelloEarth
+      name:'post_content',
+      path:'/topic/:id&author=:name',
+      components:{
+        main:Article,
+        slidebar:SlideBar
+      }
     },
     {
-      name:"list",
-      path:'/list',
-      component:list
+      name:'user_info',
+      path:'/userinfo/:name',
+      components:{
+        main:UserInfo
+      }
     }
-    ]
+  ]
 })
