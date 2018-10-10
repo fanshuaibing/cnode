@@ -53,4 +53,3 @@ Vue.filter('tabFormatter',function (post) {
     return '招聘'
   }
 })
-

@@ -25,7 +25,7 @@ export default {
   padding: 0;
 }
 .app{
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 }
 .main{
   width: 80%;

@@ -5,7 +5,7 @@
       </router-link>
       <ul>
         <li><a href="/">首页</a></li>
-        <li><a href="https://fatfanfan.github.io/resume/index.html">我的在线简历</a></li>
+        <li><a target="_blank" href="https://fatfanfan.github.io/resume/index.html">我的在线简历</a></li>
       </ul>
     </div>
 </template>
