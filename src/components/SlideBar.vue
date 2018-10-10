@@ -1,7 +1,7 @@
 <template>
 <div class="autherinfo">
 
-  <div class="authersummay" v-if="isLoading==false">
+  <div class="authersummray" v-if="isLoading==false">
     <div class="topbar" style="font-size: 16px;">作者</div>
     <div class="innerInfo">
 
@@ -12,22 +12,23 @@
           }
           }">
         <img :src="userinfo.avatar_url" alt="">
-      </router-link></span>
-      <span><router-link  :to="{
+      </router-link>
+      </span>
+
+      <span>
+        <router-link  :to="{
           name:'user_info',
           params:{
             name:userinfo.loginname
           }
           }">
-        <span>{{userinfo.loginname}}</span>
+        <span class="username">{{userinfo.loginname}}</span>
       </router-link>
       </span>
-
     </div>
-
-
-
   </div>
+
+  <!--作者最近主题-->
   <div class="recent_topics">
     <div class="topbar">作者最近主题</div>
     <ul>
@@ -44,6 +45,7 @@
       </li>
     </ul>
   </div>
+  <!--作者最近回复-->
   <div class="recent_replies">
     <div class="topbar">作者最近回复</div>
     <ul>
@@ -105,7 +107,7 @@
 </script>
 
 <style scoped>
-  .authersummay, .recent_replies, .recent_topics {
+  .authersummray, .recent_replies, .recent_topics {
     background-color: #fff;
   }
   .autherinfo {
@@ -147,18 +149,6 @@
     margin: 10px;
   }
 
-  .loginname {
-    width: 100px;
-    float: right;
-    margin-top: 22px;
-    margin-right: 159px;
-    font-size: 14px;
-  }
-
-  .loginname a {
-    text-decoration: none;
-    color: #778087;
-  }
 
   .authersummay .topbar {
     margin-top: 0px;
@@ -175,5 +165,8 @@
     white-space: nowrap;
     vertical-align: middle;
     color: #778087;
+  }
+  .username{
+    color: gray;
   }
 </style>

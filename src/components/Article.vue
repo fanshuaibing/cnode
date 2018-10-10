@@ -42,12 +42,10 @@
           {{index+1}}楼
         </span>
           <span v-if="reply.ups.length>0" >
-          ☝ {{reply.ups.length}}
-        </span>
-          <span v-else>
-        </span>
+            ☝ {{reply.ups.length}}</span>
+          <span v-else></span>
         </div>
-      <p v-html="reply.content"></p>
+      <p style="padding: 7px" v-html="reply.content"></p>
       </div>
     </div>
   </div>
