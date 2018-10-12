@@ -5,7 +5,7 @@
       </router-link>
       <ul>
         <li><a href="/">首页</a></li>
-      </ul>>
+      </ul>
     </div>
 </template>
 
