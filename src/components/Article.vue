@@ -16,7 +16,9 @@
         <li>• {{post.visit_count}}次浏览</li>
         <li>•来自{{post | tabFormatter}}</li>
       </ul>
-      <div v-html="post.content" class="topic_content"></div>
+      <div v-html="post.content"  class="markdown-body topic_content">
+
+      </div>
     </div>
     <div id="reply">
       <div class="topbar">回复</div>
@@ -45,7 +47,7 @@
             ☝ {{reply.ups.length}}</span>
           <span v-else></span>
         </div>
-      <p style="padding: 7px" v-html="reply.content"></p>
+      <p style="padding: 7px"  v-html="reply.content"></p>
       </div>
     </div>
   </div>
@@ -87,8 +89,7 @@
     }
 </script>
 
-<style >
-  @import url('../assets/markdown-github.css');
+<style scoped>
   .topbar {
     padding: 10px;
     background-color: #f6f6f6;
